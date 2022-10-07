@@ -220,8 +220,10 @@
           <div class="generator_step_wizard">
             <div class="generator_selection">
 
-              <img class="generator_selection_item selected" data-form-id="bMZNWOzvb7gjP3ymG2" src="certificates.at.com/a40521e401ae999872137edffbddcb86aa549737.jpg" />
-              <img class="generator_selection_item selected" data-form-id="bMZNWOzvb7gjP3ymG2" src="certificates.at.com/eac42cabf39c21cf858e5f844efc4a0522f8e17944d6.png" />
+              <!-- IMAGES -->
+
+              <!-- <img class="generator_selection_item selected" data-form-id="bMZNWOzvb7gjP3ymG2" src="certificates.at.com/a40521e401ae999872137edffbddcb86aa549737.jpg" /> -->
+              <img class="generator_selection_item selected" data-form-id="bMZNWOzvb7gjP3ymG2" src="certificates.at.com/Plain_C.png" />
 
             </div>
           </div>
@@ -240,42 +242,71 @@
 
           <!-- FORM -->
 
-            <div class="form-container">
-    <!-- <div class="title">Enter Certificate Details</div> -->
-    <div class="content">
-      <form action="#">
-        <div class="user-details">
-          <div class="input-box">
-            <span class="details">Full Name</span>
-            <input id="efn" type="text" placeholder="Enter your name" required>
+          <div class="row">
+
+            <div class="coloumn">
+
+                            <div class="form-container">
+          <!-- <div class="title">Enter Certificate Details</div> -->
+
+                  <div class="content">
+            <form action="#">
+              <div class="user-details">
+                <div class="input-box">
+                  <span class="details">Full Name</span>
+                  <input id="efn" type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Type Of Certificate</span>
+                  <input id="toc" type="text" placeholder="Enter certificate type" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Category</span>
+                  <input id="ctgy" type="text" placeholder="Enter category" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Contribution</span>
+                  <input id="ctrbn" type="text" placeholder="Enter employee contribution" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">CEO</span>
+                  <input id="ceo" type="text" placeholder="Enter CEO name" required>
+                </div>
+                <div class="input-box">
+                  <span class="details">Month</span>
+                  <input id="mth" type="text" placeholder="Enter month" required>
+                </div>
+              </div>
+
+              <!-- Download btn -->
+
+              <div class="button"><a href="#">Create PDF</a></div>
+              
+            </form>
+
           </div>
-          <div class="input-box">
-            <span class="details">Type Of Certificate</span>
-            <input id="toc" type="text" placeholder="Enter certificate type" required>
+      </div> 
+
+            </div>
+
+            <div class="column">
+
+              <canvas id="canvas" height="500px" width="700px"></canvas>       
+
+            </div>
+           
+
           </div>
-          <div class="input-box">
-            <span class="details">Category</span>
-            <input id="ctgy" type="text" placeholder="Enter category" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Contribution</span>
-            <input id="ctrbn" type="text" placeholder="Enter employee contribution" required>
-          </div>
-          <div class="input-box">
-            <span class="details">CEO</span>
-            <input id="ceo" type="text" placeholder="Enter CEO name" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Month</span>
-            <input id="mth" type="text" placeholder="Enter month" required>
-          </div>
-        </div>
-        <div class="button"><a href="#">Create PDF</a></div>
-      </form>
-    </div>
-  </div>
-        </div>
-      </section>
+
+</section>
+
+<!-- Canvas -->
+<section>
+  
+  <div>
+      </div>
+      
+          </section>
 
       <!-- //FOOTER -->
 
@@ -306,10 +337,15 @@
     <!-- <noscript>
       <img alt="" referrerpolicy="no-referrer-when-downgrade" src="../../../blep.bannerbear.com/noscript.gif" />
     </noscript> -->
-    <script defer='defer' src='../../../d33wubrfki0l68.cloudfront.net/js/cd55dda95ce4d8e0e0aa1bb9844850da498175be/javascripts/jquery.js'></script>
+    <!-- <script defer='defer' src='../../../d33wubrfki0l68.cloudfront.net/js/cd55dda95ce4d8e0e0aa1bb9844850da498175be/javascripts/jquery.js'></script>
     <script src="../../../cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/ace.js" defer="defer"></script>
-    <script defer='defer' src='../../../d33wubrfki0l68.cloudfront.net/bundles/4a2721288134f7e929f5e4c9b59125fc1e2691df.js'></script>
-    <script async="true" data-rewardful="5992c4" src="../../../r.wdfl.co/rw.js"></script>
+    <script defer='defer' src='../../../d33wubrfki0l68.cloudfront.net/bundles/4a2721288134f7e929f5e4c9b59125fc1e2691df.js'></script> -->
+    <!-- <script async="true" data-rewardful="5992c4" src="../../../r.wdfl.co/rw.js"></script> -->
+
+    <!-- Script -->
+
+    <script src="script/script.js"></script>
+
   </body>
 
 </html>
