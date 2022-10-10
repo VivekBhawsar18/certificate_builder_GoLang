@@ -64,5 +64,5 @@ MonthInput.addEventListener('input', function () {
 
 downloadBtn.addEventListener('click', function () { 
 	downloadBtn.href = canvas.toDataURL('image/png')
-	downloadBtn.download = 'Certificate - ' + MonthInput.value
+	downloadBtn.download = 'Certificate - ' //+ MonthInput.value
 })
