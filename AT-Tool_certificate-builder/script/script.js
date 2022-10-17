@@ -1,4 +1,22 @@
-var canvas = document.getElementById('canvas')
+window.onload = function () {
+    document.getElementById("download-btn")
+        .addEventListener("click", () => {
+            const canvas = this.document.getElementById("canvas");
+            console.log(canvas);
+            console.log(window);
+            var opt = {
+                margin: 1.5,
+                filename: 'atCertificate.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 1 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
+            };
+            html2pdf().from(canvas).set(opt).save();
+        })
+}
+
+
+var canvas = document.querySelector('canvas')
 var ctx = canvas.getContext('2d')
 var ApprInput = document.getElementById('toc')   //Type Of Certificate
 var nameInput = document.getElementById('efn')   //Full Name
@@ -6,7 +24,8 @@ var cateInput = document.getElementById('ctgy')  // Category
 var conInput = document.getElementById('ctrbn')  // Contribution
 var CEOInput = document.getElementById('ceo')	 //CEO
 var MonthInput = document.getElementById('mth')  //Month
-var downloadBtn = document.getElementById('download-btn')
+// var downloadBtn = document.querySelector('download-btn')
+
 
 
 var image = new Image()
@@ -61,8 +80,3 @@ MonthInput.addEventListener('input', function () {
 	drawImage()
 })
 
-
-downloadBtn.addEventListener('click', function () { 
-	downloadBtn.href = canvas.toDataURL('image/png')
-	downloadBtn.download = 'Certificate - ' //+ MonthInput.value
-})
