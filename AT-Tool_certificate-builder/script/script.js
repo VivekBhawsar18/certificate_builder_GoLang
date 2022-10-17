@@ -24,16 +24,26 @@ var cateInput = document.getElementById('ctgy')  // Category
 var conInput = document.getElementById('ctrbn')  // Contribution
 var CEOInput = document.getElementById('ceo')	 //CEO
 var MonthInput = document.getElementById('mth')  //Month
+var imgInput = document.getElementById('img')  //Image-Selection
+var imgInput1 = document.getElementById('img1')  //Image-Selection
+var imgInput2 = document.getElementById('img2')  //Image-Selection
 // var downloadBtn = document.querySelector('download-btn')
 
 
 
-var image = new Image()
-image.crossOrigin="anonymous";
-image.src = 'certificates.at.com\\Plain_C.png'
-image.onload = function () {
+const imgPath_array =[ 'certificates.at.com\\Plain_C.png' , 'certificates.at.com\\Plain_C1.jpg' , 'certificates.at.com\\Plain_C2.png' ]
+
+function img_load(img_path){
+	image.src = img_path;
+}
+
+	var image = new Image()
+	image.crossOrigin="anonymous";
+	image.src = img_load()
+	image.onload = function () {
 	drawImage()
 }
+
 
 function drawImage() {
 	// ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -79,4 +89,18 @@ CEOInput.addEventListener('input', function () {
 MonthInput.addEventListener('input', function () {
 	drawImage()
 })
+
+
+imgInput.addEventListener('click' , function(){
+	img_load(imgPath_array[0])
+})
+
+imgInput1.addEventListener('click' , function(){
+	img_load(imgPath_array[1])
+})
+
+imgInput2.addEventListener('click' , function(){
+	img_load(imgPath_array[2])
+})
+
 
