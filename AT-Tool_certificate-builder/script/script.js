@@ -1,3 +1,7 @@
+
+// import { jsPDF } from 'jspdf';
+
+
 window.onload = function () {
     document.getElementById("download-btn2")
         .addEventListener("click", () => {
@@ -29,6 +33,7 @@ var imgInput1 = document.getElementById('img1')  //Image-Selection
 var imgInput2 = document.getElementById('img2')  //Image-Selection
 var downloadBtn1 = document.getElementById('download-btn1') //Download-button_1
 var downloadBtn2 = document.getElementById('download-btn2') //Download-button_2
+var tempSelct = false  									   // Checking temp is selcted
 
 
 
@@ -45,6 +50,13 @@ function img_load(img_path){
 	drawImage()
 }
 
+function tempValid(){
+	if (tempSelct==true){
+		drawImage()
+	} else{
+		alert("Please select any one Template first");
+	}
+}
 
 function drawImage() {
 	// ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -73,38 +85,55 @@ function drawImage() {
 }
 
 ApprInput.addEventListener('input', function () {
-	drawImage()
+	tempValid()
 })
 nameInput.addEventListener('input', function () {
-	drawImage()
+	tempValid()
 })
 cateInput.addEventListener('input', function () {
-	drawImage()
+	tempValid()
 })
 conInput.addEventListener('input', function () {
-	drawImage()
+	tempValid()
 })
 CEOInput.addEventListener('input', function () {
-	drawImage()
+	tempValid()
 })
 MonthInput.addEventListener('input', function () {
-	drawImage()
+	tempValid()
 })
 
 
 imgInput.addEventListener('click' , function(){
+	tempSelct = true
 	img_load(imgPath_array[0])
 })
 
 imgInput1.addEventListener('click' , function(){
+	tempSelct = true
 	img_load(imgPath_array[1])
 })
 
 imgInput2.addEventListener('click' , function(){
+	tempSelct = true
 	img_load(imgPath_array[2])
 })
 
 downloadBtn1.addEventListener('click', function () { 
-	downloadBtn1.href = canvas.toDataURL('image/png')
-	downloadBtn1.download = 'Certificate - ' + MonthInput.value
+	if (tempSelct==true){
+		downloadBtn1.href = canvas.toDataURL('image/png')
+		downloadBtn1.download = 'Certificate - ' + MonthInput.value
+	} else{
+		alert("Please Fill above form first");
+	}
+
 })
+
+// htmlToImage.toPng(document && document.getElementById('canvas'),
+//      {     quality: 1, backgroundColor: '#ffffff' })
+//           .then(function(dataUrl) {
+//             var doc = new jsPDF();
+//             doc.addImage(dataUrl, 'PNG', 15, 40, 180, 180);
+//             doc.save('pension-report' + '.pdf');
+//           });
+//     }
