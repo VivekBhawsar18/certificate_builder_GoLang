@@ -1,5 +1,5 @@
 window.onload = function () {
-    document.getElementById("download-btn")
+    document.getElementById("download-btn2")
         .addEventListener("click", () => {
             const canvas = this.document.getElementById("canvas");
             console.log(canvas);
@@ -13,7 +13,7 @@ window.onload = function () {
             };
             html2pdf().from(canvas).set(opt).save();
         })
-}
+} // Function for downloading canvas as PDF 
 
 
 var canvas = document.querySelector('canvas')
@@ -27,11 +27,12 @@ var MonthInput = document.getElementById('mth')  //Month
 var imgInput = document.getElementById('img')  //Image-Selection
 var imgInput1 = document.getElementById('img1')  //Image-Selection
 var imgInput2 = document.getElementById('img2')  //Image-Selection
-// var downloadBtn = document.querySelector('download-btn')
+var downloadBtn1 = document.getElementById('download-btn1') //Download-button_1
+var downloadBtn2 = document.getElementById('download-btn2') //Download-button_2
 
 
 
-const imgPath_array =[ 'certificates.at.com\\Plain_C.png' , 'certificates.at.com\\Plain_C1.jpg' , 'certificates.at.com\\Plain_C2.png' ]
+const imgPath_array =[ 'certificates.at.com\\Plain_C.png' , 'certificates.at.com\\Plain_C1.jpg' , 'certificates.at.com\\Plain_C2.png' ] // Array of  image locations
 
 function img_load(img_path){
 	image.src = img_path;
@@ -62,11 +63,11 @@ function drawImage() {
 
 	ctx.font = '20px montserrat'
 	ctx.fillStyle = '#000000'
-	ctx.fillText(conInput.value, 75, 375)
+	ctx.fillText(conInput.value, 100, 375)
 
 	ctx.font='20px Arial,Sans-serif'
-	ctx.fillText(CEOInput.value, 50, 450)
-	ctx.fillText(MonthInput.value, 330, 450)
+	ctx.fillText(CEOInput.value, 70, 450)
+	ctx.fillText(MonthInput.value, 350, 450)
 
 
 }
@@ -103,4 +104,7 @@ imgInput2.addEventListener('click' , function(){
 	img_load(imgPath_array[2])
 })
 
-
+downloadBtn1.addEventListener('click', function () { 
+	downloadBtn1.href = canvas.toDataURL('image/png')
+	downloadBtn1.download = 'Certificate - ' + MonthInput.value
+})
