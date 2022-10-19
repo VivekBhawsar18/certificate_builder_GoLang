@@ -1,23 +1,21 @@
-
-// import { jsPDF } from 'jspdf';
-
-
-// window.onload = function () {
-//     document.getElementById("download-btn2")
-//         .addEventListener("click", () => {
-//             const canvas = this.document.getElementById("canvas");
-//             console.log(canvas);
-//             console.log(window);
-//             var opt = {
-//                 margin: 1.5,
-//                 filename: 'atCertificate.pdf',
-//                 image: { type: 'jpeg', quality: 1 },
-//                 html2canvas: { scale: 1 },
-//                 jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
-//             };
-//             html2pdf().from(canvas).set(opt).save();
-//         })
-// } // Function for downloading canvas as PDF 
+window.onload = function () {
+    document.getElementById("download-btn2")
+        .addEventListener("click", () => {
+            const canvas = this.document.getElementById("canvas");
+            console.log(canvas);
+            console.log(window);
+            var opt = {
+                // margin: [0, 0, -3, 3.8],
+                // margin: [0, 30, 0, 30],
+                margin: 0,
+                filename: 'atCertificate.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 1 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
+            };
+            html2pdf().from(canvas).set(opt).save();
+        })
+} // Function for downloading canvas as PDF 
 
 
 var canvas = document.querySelector('canvas')
@@ -128,15 +126,15 @@ downloadBtn1.addEventListener('click', function () {
 	}
 
 })
-downloadBtn2.addEventListener('click', function () { 
-	if (tempSelct==true){
-		downloadBtn2.href = canvas.toDataURL('image/png')
-		downloadBtn2.download = 'Certificate - ' + MonthInput.value
-	} else{
-		alert("Please Fill above form first");
-	}
+// downloadBtn2.addEventListener('click', function () { 
+// 	if (tempSelct==true){
+// 		downloadBtn2.href = canvas.toDataURL('image/png')
+// 		downloadBtn2.download = 'Certificate - ' + MonthInput.value
+// 	} else{
+// 		alert("Please Fill above form first");
+// 	}
 
-})
+// })
 
 // htmlToImage.toPng(document && document.getElementById('canvas'),
 //      {     quality: 1, backgroundColor: '#ffffff' })
