@@ -56,28 +56,59 @@ function tempValid(){
 	}
 }
 
+// function drawImage() {
+// 	// ctx.clearRect(0, 0, canvas.width, canvas.height)
+// 	ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
+// 	ctx.font = '15px Lucida Console,Monospace'
+// 	ctx.fillStyle = '#FFFFFF'
+// 	ctx.fillText(ApprInput.value, 145, 176)
+
+// 	ctx.font = '40px Lucida Handwriting,Cursive'
+// 	ctx.fillStyle = '#d4af37'
+// 	ctx.fillText(nameInput.value, 100, 265)
+
+// 	ctx.font = '26px montserrat'
+// 	ctx.fillStyle = '#000000'
+// 	ctx.fillText(cateInput.value, 110, 343)
+
+// 	ctx.font = '20px montserrat'
+// 	ctx.fillStyle = '#000000'
+// 	ctx.fillText(conInput.value, 100, 375)
+
+// 	ctx.font='20px Arial,Sans-serif'
+// 	ctx.fillText(CEOInput.value, 70, 450)
+// 	ctx.fillText(MonthInput.value, 350, 450)
+
+
+// }
+
 function drawImage() {
 	// ctx.clearRect(0, 0, canvas.width, canvas.height)
 	ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
-	ctx.font = '15px Lucida Console,Monospace'
+	ctx.font = '19px Lucida Console,Monospace'
 	ctx.fillStyle = '#FFFFFF'
-	ctx.fillText(ApprInput.value, 145, 176)
+	ctx.fillText(ApprInput.value, 225, 281)
 
-	ctx.font = '40px Lucida Handwriting,Cursive'
-	ctx.fillStyle = '#d4af37'
-	ctx.fillText(nameInput.value, 100, 265)
+	ctx.font = '55px Lucida Handwriting,Cursive'
+	ctx.fillStyle = '#B38728'
+	ctx.fillText(nameInput.value, 154, 430)
 
-	ctx.font = '26px montserrat'
+	ctx.strokeStyle = "#B38728";
+	ctx.moveTo(200, 450);
+	ctx.lineTo(620, 450);
+	ctx.stroke();
+
+	ctx.font = '35px montserrat'
 	ctx.fillStyle = '#000000'
-	ctx.fillText(cateInput.value, 110, 343)
+	ctx.fillText(cateInput.value, 154, 545)
 
-	ctx.font = '20px montserrat'
+	ctx.font = '23px montserrat'
 	ctx.fillStyle = '#000000'
-	ctx.fillText(conInput.value, 100, 375)
+	ctx.fillText(conInput.value, 190, 599)
 
-	ctx.font='20px Arial,Sans-serif'
-	ctx.fillText(CEOInput.value, 70, 450)
-	ctx.fillText(MonthInput.value, 350, 450)
+	ctx.font='25px Arial,Sans-serif,Bold'
+	ctx.fillText(CEOInput.value, 120, 720)
+	ctx.fillText(MonthInput.value, 530, 720)
 
 
 }
