@@ -1,0 +1,41 @@
+# Ignore binary files
+/server
+*.exe
+
+# Ignore build artifacts
+*.out
+*.o
+*.a
+
+# Ignore Go modules and dependency cache
+vendor/
+go.sum
+go.mod
+
+# Ignore editor and OS-specific files
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.tmp
+*.bak
+
+# Ignore Netlify deploy folder if created locally
+build/
+
+# Ignore specific IDE files (e.g., VSCode, JetBrains)
+.vscode/
+.idea/
+
+# Ignore rice generated files and cache
+rice-box.go
+.rice-cache/
+
+# Ignore environment and config files
+.env
+config.json
+
+# Ignore temporary or misc folders
+node_modules/
+tmp/
+dist/
